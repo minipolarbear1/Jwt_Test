@@ -1,0 +1,22 @@
+Spring:
+  datasource:
+    url: jdbc:mariadb://127.0.0.1:3306/test
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password: root
+
+  jpa:
+    properties:
+      hibernate:
+        ddl-auto: update
+    defer-datasource-initialization: true
+
+
+logging:
+  level:
+    com.example.jwttest: DEBUG
+
+jwt:
+  header: Authorization
+  secret: c2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQtc2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQK
+  token-validity-in-seconds: 6000
